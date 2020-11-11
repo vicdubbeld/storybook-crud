@@ -10,6 +10,7 @@
   "author": "Victor Dubbeld",
   "license": "MIT",
   "dependencies": {
+    "autoloader": "^2.1.0",
     "connect-mongo": "^3.2.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

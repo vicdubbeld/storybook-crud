@@ -1,8 +1,9 @@
-const GoogleStrategy = require("passport-google-oath20").Strategy;
+const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const mongoose = require("mongoose");
 const User = require("../models/User");
 
-module.export = function (passport) {
+module.exports = function (passport) {
+  // or...module.exports = function (passport) {
   passport.use(
     new GoogleStrategy(
       {
@@ -11,7 +12,7 @@ module.export = function (passport) {
         callbackURL: "/auth/google/callback",
       },
       async (accessToken, refreshToken, profile, done) => {
-        console.log(profile);
+        // console.log(profile); test
       }
     )
   );
